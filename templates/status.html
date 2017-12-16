@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <style type="text/css">
+        table {
+            border-spacing: 0px;
+        }
+        td {
+            border-bottom: solid black 1px;
+            padding: 10px;
+            empty-cells: show;
+        }
+        thead td {
+            font-weight: bold;
+        }
+        h3 {
+            color: green;
+        }
+        td.valid {
+            background-color: #baffbf;
+        }
+        td.invalid {
+            background-color: #ffd3d3;
+        }
+    </style>
+    <body>
+        <h2>{{title}}</h2>
+        <h3>Application is scheduled every hour</h3>
+        <h3>Current UTC hour: {{date}}</h3>
+        <table>
+            <thead>
+                <td>Project ID</td>
+                <td>Instance name</td>
+                <td>Instance zone</td>
+                <td>Instance status</td>
+                <td>Label: startby</td>
+                <td>Label: stopby</td>
+            </thead>
+        {% for i in status_list %}
+        <tr>
+                <td>{{i.project_id}}</td>
+                <td>{{i.instance_name}}</td>
+                <td>{{i.instance_zone}}</td>
+                <td>{{i.instance_status}}</td>
+                <td {{'class="valid"' if i.startbyvalid else 'class="invalid"'}}>{{i.startby}}</td>
+                <td {{'class="valid"' if i.stopbyvalid else 'class="invalid"'}}>{{i.stopby}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+cron:
+- description: Check for Compute Engine instances to start and stop
+  url: /cron
+  schedule: every 1 hours synchronized
