@@ -64,4 +64,4 @@ https://myappendpoint.appspot.com/cron
 
 ### Author
 
-Paul Chapotet — paul@chapotet.com
+Paul Chapotet — paul.chapotet@cloudreach.com
