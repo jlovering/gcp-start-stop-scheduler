@@ -3,6 +3,10 @@
 ### In a few words
 This repository contains a Google App Engine application that can schedule start and stop operations on your GCP instances through the use of labels.
 
+### Architecture
+
+![Architecture](images/gcp-start-stop-scheduler.png)
+
 ### How to deploy
 - Make sure you have gcloud tool installed on your computer https://cloud.google.com/sdk/
 - Make sure you have access to the Google Cloud Platform project where you want to deploy this tool
@@ -64,4 +68,4 @@ https://myappendpoint.appspot.com/cron
 
 ### Author
 
-Paul Chapotet — paul.chapotet@cloudreach.com
+Paul Chapotet — paul@chapotet.com
