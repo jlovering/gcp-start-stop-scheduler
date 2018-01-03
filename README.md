@@ -35,22 +35,22 @@ stopby: 0
 ```
 - Run only on working days (Monday to Friday):
 ```
-stopby: 0d;
-startby: 8d;
+stopby: 0d
+startby: 8d
 => Stop instance at midnight UTC and start it at 8AM UTC from Monday to Friday
 ```
 
 - Run only on weekends (Saturday and Sunday):
 ```
-startby: 18w;
-stopby: 14w;
+startby: 18w
+stopby: 14w
 => Start instance at 2pm UTC and stop it at 6pm UTC from Saturday to Sunday
 ```
 
 - Run only a stop, for example if an instance is for a developer.
 When he comes in the morning he can start his instance manually when needed:
 ```
-stopby: 18d;
+stopby: 18d
 => Stop an instance at 6pm UTC every day of the working week
 ```
 
